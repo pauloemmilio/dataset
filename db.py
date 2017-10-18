@@ -23,7 +23,7 @@ def add_tweet(tweet, sentiment):
 
 @orm.db_session
 def get_tweets():
-    return orm.select(t for t in Tweet)
+    return orm.select(t for t in Tweet)[:].show()
 
 
 @orm.db_session
